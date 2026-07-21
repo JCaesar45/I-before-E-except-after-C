@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHER // VAULT</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <canvas id="noise-canvas"></canvas>
+
+  <header class="main-header">
+    <div class="brand-mark">
+      <span class="brand-text">AETHER</span>
+      <span class="brand-divider"></span>
+      <span class="brand-sub">VAULT</span>
+    </div>
+    <nav class="primary-nav">
+      <a href="#access" class="nav-link">Secure Access</a>
+      <a href="#manifest" class="nav-link">Manifest</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content reveal">
+        <h1 class="hero-title">
+          <span class="title-line">Absolute</span>
+          <span class="title-line accent">Sovereignty.</span>
+        </h1>
+        <p class="hero-subtitle">Institutional-grade digital asset custody, engineered for the uncompromising.</p>
+      </div>
+    </section>
+
+    <section class="vault-interface" id="access">
+      <div class="vault-door reveal">
+        <div class="vault-glass">
+          <h2 class="vault-heading">Initialize Session</h2>
+          <form id="auth-form" class="auth-form" novalidate>
+            <div class="input-group">
+              <label for="client-id" class="input-label">Client Identifier</label>
+              <input type="text" id="client-id" name="clientId" class="input-field" autocomplete="off" required>
+              <span class="input-highlight"></span>
+            </div>
+            <div class="input-group">
+              <label for="access-key" class="input-label">Cryptographic Key</label>
+              <input type="password" id="access-key" name="accessKey" class="input-field" autocomplete="off" required>
+              <span class="input-highlight"></span>
+            </div>
+            <button type="submit" class="submit-btn" id="submit-btn">
+              <span class="btn-text">Authenticate</span>
+              <span class="btn-loader"></span>
+            </button>
+          </form>
+          <div class="security-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>End-to-End Encrypted // Ed25519</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 Aether Holdings. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script type="module" src="client.js"></script>
+</body>
+
+</html>

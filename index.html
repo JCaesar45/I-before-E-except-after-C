@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,6 +33,7 @@
           <span class="title-line accent">Sovereignty.</span>
         </h1>
         <p class="hero-subtitle">Institutional-grade digital asset custody, engineered for the uncompromising.</p>
+        <a href="#access" class="hero-cta">Enter the Vault</a>
       </div>
     </section>
 
@@ -44,23 +45,47 @@
             <div class="input-group">
               <label for="client-id" class="input-label">Client Identifier</label>
               <input type="text" id="client-id" name="clientId" class="input-field" autocomplete="off" required>
-              <span class="input-highlight"></span>
+              <span class="input-line"></span>
             </div>
             <div class="input-group">
               <label for="access-key" class="input-label">Cryptographic Key</label>
               <input type="password" id="access-key" name="accessKey" class="input-field" autocomplete="off" required>
-              <span class="input-highlight"></span>
+              <span class="input-line"></span>
             </div>
             <button type="submit" class="submit-btn" id="submit-btn">
               <span class="btn-text">Authenticate</span>
               <span class="btn-loader"></span>
             </button>
+            <p class="form-message" id="form-message"></p>
           </form>
           <div class="security-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
             <span>End-to-End Encrypted // Ed25519</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifest-section" id="manifest">
+      <div class="manifest-content reveal">
+        <h2 class="manifest-title">The Manifest</h2>
+        <div class="manifest-grid">
+          <div class="manifest-card">
+            <span class="card-number">01</span>
+            <h3>Zero Knowledge</h3>
+            <p>Your keys never leave your device. We verify without seeing.</p>
+          </div>
+          <div class="manifest-card">
+            <span class="card-number">02</span>
+            <h3>Elliptic Precision</h3>
+            <p>Ed25519 signatures. 128-bit collision resistance. No compromises.</p>
+          </div>
+          <div class="manifest-card">
+            <span class="card-number">03</span>
+            <h3>Temporal Locks</h3>
+            <p>Session tokens expire in 3600 seconds. Rotated automatically.</p>
           </div>
         </div>
       </div>
@@ -72,7 +97,6 @@
   </footer>
 
   <script src="app.js"></script>
-  <script type="module" src="client.js"></script>
 </body>
 
 </html>
